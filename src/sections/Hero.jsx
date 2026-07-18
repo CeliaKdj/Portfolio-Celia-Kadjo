@@ -1,6 +1,10 @@
 import { Button } from "@/components/Button";
 import { ArrowRight, Download } from "lucide-react";
 
+const skills = [
+    "HTML","CSS","JavaScript","React", "Tailwind", "Java", "Spring Boot", "SQL", "Laravel" , "Docker","MongoDB","Express.js", "Node.js", "Git", "Git Actions", "TypeScript"
+]
+
 export const Hero = () => {
     return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -103,7 +107,7 @@ export const Hero = () => {
                         <div className="relative glass rounded-3xl p-2 glow-border">
                             <img src="/photopro.png" alt="Célia Kadjo" className="w-full aspect-[5/5] object-cover rounded-2xl"/>
                             {/* badge flotant */}
-                            <div className="absolute -botton-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                            <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
                                 <div className="flex items-center gap-3">
                                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
                                     <span className="text-xs font-medium uppercase">Open to work</span>
@@ -111,6 +115,19 @@ export const Hero = () => {
                             </div>
                             {/* badge stat */}
                         </div>
+                    </div>
+                </div>
+            </div>
+            {/* { section skils } */}
+            <div className="mt-20 animate-fade-in animation-delay-600">
+                <p className="text-sm text-muted-foreground mb-6 text-center">Hard Skills</p>
+                <div className="relative overflow-hidden">
+                    <div className="flex animate-skills">
+                        {[...skills, ...skills].map((skill, idx)=>(
+                            <div key={idx} className="flex-shrink-0 px-8 py-4">
+                                <span className="text-xl font-semibold text-muted-foreground/50 hover:text-muted-foreground transition-colors">{skill}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
