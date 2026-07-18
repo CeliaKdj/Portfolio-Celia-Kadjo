@@ -7,7 +7,7 @@ const skills = [
 
 export const Hero = () => {
     return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="apropos" className="relative min-h-screen flex items-center overflow-hidden">
         {/* background */}
         <div className="absolute inset-0">
             <img src="/hero-bg.jpg" 
@@ -120,7 +120,7 @@ export const Hero = () => {
             </div>
             {/* { section skils } */}
             <div className="mt-20 animate-fade-in animation-delay-600">
-                <p className="text-sm text-muted-foreground mb-6 text-center">Hard Skills</p>
+                {/* <p className="text-sm text-muted-foreground mb-6 text-center uppercase">Hard Skills</p> */}
                 <div className="relative overflow-hidden">
                     <div className="flex animate-skills">
                         {[...skills, ...skills].map((skill, idx)=>(
