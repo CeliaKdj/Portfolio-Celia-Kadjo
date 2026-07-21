@@ -19,18 +19,18 @@ export const Contact = () => {
                 <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 animate-fade-in animation-delay-300">
                     
                     {/* Carte Email */}
-                    <a href="mailto:ton.adresse@email.com" className="group glass p-8 rounded-2xl flex items-center gap-6 hover:bg-primary/5 transition-colors duration-300">
+                    <div className="group glass p-8 rounded-2xl flex items-center gap-6 hover:bg-primary/5 transition-colors duration-300 cursor-pointer">
                         <div className="w-14 h-14 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
                             <Mail className="w-6 h-6" />
                         </div>
                         <div>
                             <h3 className="text-lg font-bold mb-1">Email</h3>
-                            <p className="text-muted-foreground">celia.kadjo.pro@@gmail.com</p>
+                            <p className="text-muted-foreground">celia.kadjo.pro@gmail.com</p>
                         </div>
-                    </a>
+                    </div>
 
                     {/* Carte Téléphone */}
-                    <a href="tel:+33600000000" className="group glass p-8 rounded-2xl flex items-center gap-6 hover:bg-primary/5 transition-colors duration-300">
+                    <div className="group glass p-8 rounded-2xl flex items-center gap-6 hover:bg-primary/5 transition-colors duration-300 cursor-pointer">
                         <div className="w-14 h-14 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
                             <Phone className="w-6 h-6" />
                         </div>
@@ -38,7 +38,7 @@ export const Contact = () => {
                             <h3 className="text-lg font-bold mb-1">Téléphone</h3>
                             <p className="text-muted-foreground">06 25 89 35 59</p>
                         </div>
-                    </a>
+                    </div>
 
                     {/* Carte LinkedIn */}
                     <a href="https://www.linkedin.com/in/celia-kadjo" target="_blank" rel="noopener noreferrer" className="group glass p-8 rounded-2xl flex items-center gap-6 hover:bg-primary/5 transition-colors duration-300">
@@ -61,12 +61,12 @@ export const Contact = () => {
                         </div>
                         <div>
                             <h3 className="text-lg font-bold mb-1">Localisation</h3>
-                            <p className="text-muted-foreground">Lille (Web@cadémie)</p>
+                            <p className="text-muted-foreground">Métropole Lilloise et alentours</p>
                         </div>
                     </div>
                 </div>
 
-                {/* Section Réseaux sociaux ajoutée ici */}
+                {/* Section Réseaux sociaux */}
                 <div className="max-w-4xl mx-auto mt-12 flex justify-center items-center gap-4 animate-fade-in animation-delay-400">
                     <span className="text-sm text-muted-foreground">Suivez-moi</span>
                     

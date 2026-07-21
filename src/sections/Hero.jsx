@@ -63,9 +63,6 @@ export const Hero = () => {
                     </div>
                     {/* contact */}
                     <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-                        <Button size="lg">
-                            Me contacter <ArrowRight className="w-5 h-5" />
-                        </Button>
                         <a 
                             href="/Célia-Kadjo-CV-Alternance2026.pdf" 
                             download="Célia-Kadjo-CV-Alternance2026.pdf"
@@ -73,7 +70,7 @@ export const Hero = () => {
                             rel="noopener noreferrer"
                         >
                         <Button size="lg">
-                            Télécharger mon CV <Download className="w-5 h-5" />
+                            Télécharger mon CV <Download className="w-5 h-5 cursor-pointer" />
                         </Button>
                         </a>
                     </div>

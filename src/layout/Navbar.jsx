@@ -32,11 +32,11 @@ export const Navbar = () => {
             </div>
 
             {/* contact bouton ordinateur */}
-            <div  className="hidden md:block">
+            <a href="#contact" className="hidden md:block">
                 <Button size="sm">
                     Contactez-moi
                 </Button>
-            </div>
+            </a>
 
             {/* bouton menu mobile */}
             <button 
@@ -57,10 +57,6 @@ export const Navbar = () => {
                     {link.label}
                  </a>
                 ))}
-
-                <Button>
-                    Contactez-moi
-                </Button>
             </div>
         </div>
         )}
