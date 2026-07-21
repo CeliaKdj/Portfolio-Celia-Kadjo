@@ -38,11 +38,11 @@ export const Hero = () => {
 
         {/* contenu */}
         <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-4 gap-12 items-center">
                 {/* colone gauche - contenu texte */}
-                <div className="space-y-8">
+                <div className="space-y-8 lg:col-span-3">
                     <div className="animate-fade-in">
-                        <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-lg text-primary">
+                        <span className="inline-flB ! Jex items-center gap-2 px-4 py-2 rounded-full glass text-lg text-primary lg:col-span-2">
                             <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                             Développeuse web - Étudiante
                         </span>
@@ -52,8 +52,8 @@ export const Hero = () => {
                         <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold leading-tight animate-fade-in animation-delay-100">
                             Recherche une <span className="text-primary glow-text">alternance</span> en Developpement Web pour <span className="text-primary glow-text">Septembre 2026</span> (durée de <span className="text-primary glow-text font-serif italic font-normal">14 mois).</span>
                         </h1>
-                            <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                                Hello ! Je m'appelle Célia, je suis étudiante à 
+                            <p className="text-lg text-muted-foreground max-w-4xl animate-fade-in animation-delay-200">
+                                Bienvenue ! Je m'appelle Célia, je suis étudiante à 
                                 Épitech Lille à la Web@cadémie. <br/> Je me spécialise dans le développement 
                                 fullstack avec une forte affinité pour le Front-end. Passionnée par la 
                                 création d'interfaces modernes et intuitives, je souhaite également 
@@ -66,9 +66,16 @@ export const Hero = () => {
                         <Button size="lg">
                             Me contacter <ArrowRight className="w-5 h-5" />
                         </Button>
+                        <a 
+                            href="/Célia-Kadjo-CV-Alternance2026.pdf" 
+                            download="Célia-Kadjo-CV-Alternance2026.pdf"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >
                         <Button size="lg">
                             Télécharger mon CV <Download className="w-5 h-5" />
                         </Button>
+                        </a>
                     </div>
 
                     {/* reseaux sociaux */}
@@ -103,9 +110,9 @@ export const Hero = () => {
                 {/* colonne droite - image de profil */}
                 <div className="relative animate-fade-in animation-delay-300">
                     {/* phote de profil */}
-                    <div className="relative max-w-md mx-auto">
+                    <div className="relative max-w-sm mx-auto lg:ml-auto lg:mr-0">
                         <div className="relative glass rounded-3xl p-2 glow-border">
-                            <img src="/photopro.png" alt="Célia Kadjo" className="w-full aspect-[5/5] object-cover rounded-2xl"/>
+                            <img src="/photoprofil.jpeg" alt="Célia Kadjo" className="w-full aspect-[5/5] object-cover rounded-2xl"/>
                             {/* badge flotant */}
                             <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
                                 <div className="flex items-center gap-3">

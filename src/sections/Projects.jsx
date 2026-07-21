@@ -13,7 +13,7 @@ const projects = [
         title: "My Cinéma",
         description: 
             "Conception d'un back-office pour le gérant d'un cinéma afin qu'il puisse gérer le mieux possible son cinéma.",
-        image: "/projects/generateur-cv.png",
+        image: "/projects/my-cinema.png",
         tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Projet individuel"],
     
     },
@@ -21,7 +21,7 @@ const projects = [
         title: "Portfolio",
         description: 
             "Conception et publication d'un portfolio professionnel multi-pages, destiné à présenter le profil, le parcours et les réalisations.",
-        image: "/projects/generateur-cv.png",
+        image: "/projects/portfolio-jekyll.png",
         tags: ["Jekyll", "Markdown", "GitHub Pages", "GitHub Actions", "Projet individuel"],
     
     },
