@@ -1,6 +1,22 @@
-import { Mail, Phone, MapPin } from "lucide-react";
+import { useState } from "react";
+import { Mail, Phone, MapPin, Copy } from "lucide-react";
 
 export const Contact = () => {
+    // pour memoriser l'élement qui vient d'être copié:
+    const [copiedItem, setCopiedItem] = useState("");
+
+    // fonction qui gere clic et copie
+    const handleCopy = (text, type) => {
+        navigator.clipboard.writeText(text); // copie dans le presse-papier
+        setCopiedItem(type); // déclenche l'affichage du message "Copié"
+        
+        // fait disparaître le message "Copié" après 2 secondes
+        setTimeout(() => {
+            setCopiedItem("");
+        }, 2000);
+    };
+
+
     return (
         <section id="contact" className="py-32 relative overflow-hidden">
             {/* Décoration de fond */}
@@ -19,26 +35,45 @@ export const Contact = () => {
                 <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-6 animate-fade-in animation-delay-300">
                     
                     {/* Carte Email */}
-                    <div className="group glass p-8 rounded-2xl flex items-center gap-6 hover:bg-primary/5 transition-colors duration-300 cursor-pointer">
+                    <button 
+                        onClick={() => handleCopy("celia.kadjo.pro@gmail.com", "email")}
+                        className="group glass p-8 rounded-2xl flex items-center gap-6 hover:bg-primary/5 transition-colors duration-300 w-full text-left"
+                    >
                         <div className="w-14 h-14 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
                             <Mail className="w-6 h-6" />
                         </div>
                         <div>
                             <h3 className="text-lg font-bold mb-1">Email</h3>
-                            <p className="text-muted-foreground">celia.kadjo.pro@gmail.com</p>
+                            {/* Affichage dynamique du texte selon l'état */}
+                            <p className={copiedItem === "email" ? "text-green-500 font-medium" : "text-muted-foreground"}>
+                                {copiedItem === "email" ? "Adresse copiée !" : "celia.kadjo.pro@gmail.com"}
+                            </p>
                         </div>
-                    </div>
+
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2 text-primary">
+                            <Copy className="w-5 h-5" />
+                        </div>
+                    </button>
 
                     {/* Carte Téléphone */}
-                    <div className="group glass p-8 rounded-2xl flex items-center gap-6 hover:bg-primary/5 transition-colors duration-300 cursor-pointer">
+                    <button 
+                        onClick={() => handleCopy("06 25 89 35 59", "phone")}
+                        className="group glass p-8 rounded-2xl flex items-center gap-6 hover:bg-primary/5 transition-colors duration-300 w-full text-left"
+                    >
                         <div className="w-14 h-14 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
                             <Phone className="w-6 h-6" />
                         </div>
                         <div>
                             <h3 className="text-lg font-bold mb-1">Téléphone</h3>
-                            <p className="text-muted-foreground">06 25 89 35 59</p>
+                            <p className={copiedItem === "phone" ? "text-green-500 font-medium" : "text-muted-foreground"}>
+                                {copiedItem === "phone" ? "Numéro copié !" : "06 25 89 35 59"}
+                            </p>
                         </div>
-                    </div>
+
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center gap-2 text-primary">
+                            <Copy className="w-5 h-5" />
+                        </div>
+                    </button>
 
                     {/* Carte LinkedIn */}
                     <a href="https://www.linkedin.com/in/celia-kadjo" target="_blank" rel="noopener noreferrer" className="group glass p-8 rounded-2xl flex items-center gap-6 hover:bg-primary/5 transition-colors duration-300">
@@ -55,7 +90,7 @@ export const Contact = () => {
                     </a>
 
                     {/* Carte Localisation */}
-                    <div className="group glass p-8 rounded-2xl flex items-center gap-6">
+                    <div className="group glass p-8 rounded-2xl flex items-center gap-6 hover:bg-primary/5 transition-colors">
                         <div className="w-14 h-14 shrink-0 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
                             <MapPin className="w-6 h-6" />
                         </div>
