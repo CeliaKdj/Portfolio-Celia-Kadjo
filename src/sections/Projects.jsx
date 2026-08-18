@@ -5,8 +5,8 @@ const projects = [
             "Conception d'un générateur de CV en ligne, permettant à un utilisateur de créer, visualiser, modifier et exporter un CV professionnel au format PDF.",
         image: "/projects/generateur-cv.png",
         tags: ["HTML", "CSS", "JavaScript", "PHP", "Boostrap", "Projet individuel"],
-        link: "#",
-        github: "#",
+        link: "https://potential-spoon-wr17l6e.pages.github.io/tailwind/",
+
     
     },
     {
@@ -15,6 +15,8 @@ const projects = [
             "Conception d'un back-office pour le gérant d'un cinéma afin qu'il puisse gérer le mieux possible son cinéma.",
         image: "/projects/my-cinema.png",
         tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Projet individuel"],
+        link: "https://potential-spoon-wr17l6e.pages.github.io/tailwind/",
+
     
     },
     {
@@ -23,6 +25,8 @@ const projects = [
             "Conception et publication d'un portfolio professionnel multi-pages, destiné à présenter le profil, le parcours et les réalisations.",
         image: "/projects/portfolio-jekyll.png",
         tags: ["Jekyll", "Markdown", "GitHub Pages", "GitHub Actions", "Projet individuel"],
+        link: "https://scaling-fortnight-r6ngv3v.pages.github.io/",
+
     
     },
     {
@@ -31,6 +35,7 @@ const projects = [
             "Premier projet d’intégration web : construction de la page d’accueil de Klivio, une plateforme proposant des formations en ligne.",
         image: "/projects/klivio.png",
         tags: ["HTML", "TailwindCSS", "Projet individuel"],
+        link: "https://potential-spoon-wr17l6e.pages.github.io/tailwind/",
     
     },
 ]
@@ -54,13 +59,32 @@ export const Projects = () => {
                     <div key={idx} 
                          className="group glass rounded-2xl overflow-hidden animate-fade-in flex flex-col md:flex-row">
                         
-                        <div className="relative overflow-hidden w-full md:w-1/2 aspect-video md:aspect-auto">
+                        <div className="relative overflow-hidden w-full h-full md:w-1/2 aspect-video md:aspect-auto">
+                            <a 
+                            href={project.link || "#"}
+                            target={project.link && project.link !== "#" ? "_blank" : "_self"}
+                            rel="noopener noreferrer"
+                            className={`relative overflow-hidden w-full h-full aspect-video md:aspect-auto block ${project.link && project.link !== "#" ? "cursor-pointer" : "cursor-default"}`}
+                            onClick={(e) => {
+                                // Empêche le comportement par défaut si le lien est vide ou égal à "#"
+                                if (!project.link || project.link === "#") {
+                                    e.preventDefault();
+                                }
+                            }}
+                        >
                             <img 
                                 src={project.image}
                                 alt={project.title}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div>
+                        </a>
+                            {/* <img 
+                                src={project.image}
+                                alt={project.title}
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                /> */}
+                            {/* <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-60"></div> */}
                         </div>
 
                         <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">

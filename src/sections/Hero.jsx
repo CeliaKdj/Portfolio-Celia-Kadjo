@@ -64,8 +64,8 @@ export const Hero = () => {
                     {/* contact */}
                     <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
                         <a 
-                            href="/Célia-Kadjo-CV-Alternance2026.pdf" 
-                            download="Célia-Kadjo-CV-Alternance2026.pdf"
+                            href="/CV_Celia_Kadjo_Alternance2026.pdf" 
+                            download="CV_Celia_Kadjo_Alternance2026.pdf"
                             target="_blank" 
                             rel="noopener noreferrer"
                         >
