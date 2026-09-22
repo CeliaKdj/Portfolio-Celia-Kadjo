@@ -50,7 +50,7 @@ export const Hero = () => {
                     {/* headline  */}
                     <div className="space-y-4">
                         <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold leading-tight animate-fade-in animation-delay-100">
-                            Recherche une <span className="text-primary glow-text">alternance</span> en Developpement Web pour <span className="text-primary glow-text">Septembre 2026</span> (durée de <span className="text-primary glow-text font-serif italic font-normal">14 mois).</span>
+                            Recherche une <span className="text-primary glow-text">alternance</span> en Developpement Web pour <span className="text-primary glow-text">Octobre 2026</span> (durée de <span className="text-primary glow-text font-serif italic font-normal">14 mois).</span>
                         </h1>
                             <p className="text-lg text-muted-foreground max-w-4xl animate-fade-in animation-delay-200">
                                 Bienvenue ! Je m'appelle Célia, je suis étudiante à 

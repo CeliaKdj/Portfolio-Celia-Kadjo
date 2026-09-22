@@ -15,7 +15,7 @@ const projects = [
             "Conception d'un back-office pour le gérant d'un cinéma afin qu'il puisse gérer le mieux possible son cinéma.",
         image: "/projects/my-cinema.png",
         tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Projet individuel"],
-        link: "https://potential-spoon-wr17l6e.pages.github.io/tailwind/",
+        link: "https://github.com/CeliaKdj/My-Cinema",
 
     
     },
@@ -38,6 +38,16 @@ const projects = [
         link: "https://potential-spoon-wr17l6e.pages.github.io/tailwind/",
     
     },
+    {
+        title: "Côte d'Ivoire - Le guide",
+        description: 
+            "Mon tout premier site internet en HTML et CSS : blog sur la côte d'ivoire",
+        image: "/projects/cote-divoire-le-guide.png",
+        tags: ["HTML", "CSS", "Projet individuel"],
+        link: "https://celiakdj.github.io/CotedIvoireLeGuide/",
+    
+    },
+
 ]
 
 export const Projects = () => {
